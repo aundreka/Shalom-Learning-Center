@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalom Learning Center - Wisdom is the Fountain of Life | Private Christian School</title>
+    <meta name="description" content="Shalom Learning Center - 31+ years of quality Christian education in Dasmariñas, Cavite. DepEd-recognized Pre-school, Elementary & Junior High School programs with E-Learning platform.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .primary-blue { color: #010183; }
+        .accent-red { color: #CB0002; }
+        .accent-sky-blue { color: #018EDD; }
+        .accent-yellow { color: #FFFF01; }
+        
+        .bg-primary-blue { background-color: #010183; }
+        .bg-accent-red { background-color: #CB0002; }
+        .bg-accent-sky-blue { background-color: #018EDD; }
+        .bg-accent-yellow { background-color: #FFFF01; }
+        
+        .hover-primary-blue:hover { background-color: #010183; }
+        .hover-accent-red:hover { background-color: #CB0002; }
+        
+        .gradient-shalom {
+            background: linear-gradient(135deg, #010183 0%, #018EDD 50%, #CB0002 100%);
+        }
+        
+        .text-gradient-shalom {
+            background: linear-gradient(135deg, #010183 0%, #018EDD 50%, #CB0002 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .heading-font {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .activity-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #010183, #018EDD);
+        }
+        
+        .fab-messenger {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #010183, #018EDD);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(1, 1, 131, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .fab-messenger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(1, 1, 131, 0.5);
+        }
+        
+        .wave-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0v20h100v-20z' fill='%23010183'/%3E%3Cpath d='m0 0c20 0 20 20 40 20s20-20 40-20 20 20 40 20v-20z' fill='%23018EDD' fill-opacity='0.3'/%3E%3C/svg%3E");
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .click-to-call {
+            transition: all 0.3s ease;
+        }
+        
+        .click-to-call:hover {
+            color: #010183;
+            text-decoration: underline;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(45deg, #f0f9ff, #e0f2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 3rem;
+            min-height: 200px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .mobile-menu {
+                display: block;
+            }
+            .desktop-menu {
+                display: none;
+            }
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100vh;
+            background: white;
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-panel.active {
+            right: 0;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .section-divider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        /* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .heading-font {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    h1.heading-font {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+    }
+    
+    h2.heading-font {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    h3.heading-font {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    /* Text sizes */
+    .text-4xl, .text-5xl {
+        font-size: 1.875rem !important;
+        line-height: 2.25rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.25rem !important;
+        line-height: 1.75rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem !important;
+        line-height: 1.75rem !important;
+    }
+    
+    /* Spacing adjustments */
+    .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .py-16 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    .py-32 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .mb-16 {
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .mb-12 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .mb-8 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Navigation */
+    .nav-brand {
+        font-size: 1.125rem !important;
+    }
+    
+    /* Hero floating card */
+    .float-animation {
+        transform: none !important;
+        animation: none !important;
+    }
+    
+    .hero-card {
+        transform: rotate(0deg) !important;
+        margin-top: 2rem;
+    }
+    
+    /* Grid adjustments */
+    .grid {
+        gap: 1rem !important;
+    }
+    
+    .gap-8 {
+        gap: 1.5rem !important;
+    }
+    
+    .gap-12 {
+        gap: 2rem !important;
+    }
+    
+    /* Stats section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    
+    /* Button adjustments */
+    .btn-responsive {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Cards */
+    .feature-card, .bg-white {
+        padding: 1.5rem !important;
+    }
+    
+    /* Image adjustments */
+    .h-80 {
+        height: 12rem !important;
+    }
+    
+    .h-64 {
+        height: 10rem !important;
+    }
+    
+    .h-48 {
+        height: 8rem !important;
+    }
+    
+    .h-32 {
+        height: 6rem !important;
+    }
+    
+    /* Gallery grid */
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Contact form */
+    .contact-form-container {
+        padding: 1.5rem !important;
+    }
+    
+    /* Map container */
+    .map-container iframe {
+        height: 250px !important;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    /* Overflow fixes */
+    .overflow-hidden {
+        overflow: hidden;
+    }
+    
+    /* Text overflow */
+    .text-container {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container, .max-w-7xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Timeline adjustments */
+    .timeline-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Programs section */
+    .programs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Summer programs */
+    .summer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* E-learning section */
+    .elearning-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    
+    /* Alumni section */
+    .alumni-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Contact section adjustments */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Form adjustments */
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Flex adjustments */
+    .flex-responsive {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    /* Hide decorative elements on mobile */
+    .decorative-blur {
+        display: none !important;
+    }
+    
+    /* Admission section */
+    .admission-content {
+        padding: 1.5rem !important;
+    }
+    
+    /* Mission/Vision cards */
+    .mission-vision-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Floating button adjustment */
+    .fab-messenger {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 18px !important;
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    h1.heading-font {
+        font-size: 2rem !important;
+        line-height: 1.1;
+    }
+    
+    .text-4xl, .text-5xl {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 1.25rem !important;
+        line-height: 1.75rem !important;
+    }
+    
+    .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .container, .max-w-7xl {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    
+    /* Stats grid to single column on very small screens */
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Gallery to single column */
+    .image-gallery {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* E-learning grid to single column */
+    .elearning-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Button text size */
+    .btn-responsive {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    /* Card padding */
+    .feature-card, .bg-white {
+        padding: 1rem !important;
+    }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 896px) and (orientation: landscape) {
+    .py-32 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .hero-section {
+        min-height: auto !important;
+    }
+    
+    .float-animation {
+        animation: none !important;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .text-4xl, .text-5xl {
+        font-size: 2.25rem !important;
+        line-height: 2.5rem !important;
+    }
+    
+    .programs-grid, .summer-grid, .alumni-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Utility classes for mobile responsiveness */
+.mobile-hidden {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+    
+    .mobile-only {
+        display: block !important;
+    }
+    
+    .mobile-flex {
+        display: flex !important;
+    }
+    
+    .mobile-text-center {
+        text-align: center !important;
+    }
+    
+    .mobile-text-left {
+        text-align: left !important;
+    }
+}
+/* Mobile Responsiveness - Add this to your existing mobile CSS */
+@media (max-width: 768px) {
+    /* Image overlay text adjustments */
+    .absolute h3 {
+        font-size: 0.875rem !important; /* 14px */
+        line-height: 1.25rem !important;
+        font-weight: 600 !important;
+    }
+    
+    .absolute p.text-sm {
+        font-size: 0.75rem !important; /* 12px */
+        line-height: 1rem !important;
+    }
+    
+    /* Image overlay container adjustments */
+    .absolute.bottom-4 {
+        bottom: 0.5rem !important;
+        left: 0.5rem !important;
+        padding: 0.5rem 0.75rem !important;
+        border-radius: 0.375rem !important;
+    }
+    
+    /* Image container height adjustment */
+    .h-48 {
+        height: 10rem !important; /* Slightly taller for better proportion */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens - even smaller text */
+    .absolute h3 {
+        font-size: 0.75rem !important; /* 12px */
+        line-height: 1rem !important;
+    }
+    
+    .absolute p.text-sm {
+        font-size: 0.625rem !important; /* 10px */
+        line-height: 0.875rem !important;
+    }
+    
+    /* Make overlay even more compact */
+    .absolute.bottom-4 {
+        bottom: 0.25rem !important;
+        left: 0.25rem !important;
+        padding: 0.375rem 0.5rem !important;
+    }
+}
+    </style>
+
+    <!-- Schema Markup for Educational Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Shalom Learning Center, Inc.",
+        "url": "https://shalom.edu.ph",
+        "description": "Private Christian School in Dasmariñas, Cavite - 31+ years of quality education with DepEd-recognized programs from Pre-school to Junior High School",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Private Lot, Brgy. Fatima 1-K",
+            "addressLocality": "Dasmariñas",
+            "addressRegion": "Cavite",
+            "addressCountry": "PH"
+        },
+        "telephone": "+639327625282",
+        "email": "admission@shalom.edu.ph",
+        "foundingDate": "1993",
+        "slogan": "Wisdom is the fountain of life"
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+<div class="w-16 h-16 rounded-full flex items-center justify-center ">
+  <img
+    src="logo.jpg"
+    alt="Shalom Logo"
+    class="w-full h-full object-contain rounded-full"
+  >
+</div>
+
+                    <div>
+                        <span class="heading-font text-xl sm:text-2xl primary-blue">Shalom Learning Center</span>
+                        <span class="hidden sm:block text-xs text-gray-600">Est. 1993 • "Wisdom is the fountain of life"</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6 desktop-menu">
+                    <a href="#home" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm ">Home</a>
+                    <a href="#about" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">About</a>
+                    <a href="#programs" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">Programs</a>
+                    <a href="#elearning" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">E-Learning</a>
+                    <a href="#summer" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">Summer</a>
+                    <a href="#admissions" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">Admissions</a>
+                    <a href="#contact" class="nav-link primary-blue hover:text-blue-600 px-2 py-2 font-medium text-sm">Contact</a>
+                    <a href="tel:+639327625282" class="bg-accent-red hover-accent-red text-white px-4 py-2 rounded-full transition duration-300 flex items-center text-sm">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu">
+                    <button id="mobile-menu-button" class="primary-blue hover:text-blue-600 p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu-panel" class="mobile-menu-panel">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white mr-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="heading-font text-lg primary-blue">Shalom</span>
+                </div>
+                <button id="close-mobile-menu" class="text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="#home" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">Home</a>
+                <a href="#about" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">About</a>
+                <a href="#programs" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">Programs</a>
+                <a href="#elearning" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">E-Learning</a>
+                <a href="#summer" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">Summer</a>
+                <a href="#admissions" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">Admissions</a>
+                <a href="#contact" class="block py-3 px-4 rounded-lg hover:bg-gray-100 primary-blue font-medium btn-responsive">Contact</a>
+                <div class="pt-4 border-t">
+                    <a href="tel:+639327625282" class="block w-full bg-accent-red text-white text-center py-3 px-4 rounded-lg font-medium btn-responsive">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                    <a href="mailto:admission@shalom.edu.ph" class="block w-full bg-accent-sky-blue text-white text-center py-3 px-4 rounded-lg font-medium mt-2 btn-responsive">
+                        <i class="fas fa-envelope mr-2"></i> Email Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Floating Contact Button -->
+    <a href="mailto:admission@shalom.edu.ph?subject=Enrollment%20Inquiry&body=Hello!%20I'm%20interested%20in%20enrolling%20my%20child%20at%20Shalom%20Learning%20Center.%20Please%20provide%20more%20information%20about%20your%20programs." 
+       class="fab-messenger btn-responsive"
+       aria-label="Email us for enrollment ">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="wave-bg gradient-shalom text-white py-20 lg:py-32 relative section-divider">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl mb-4 slide-in">
+                        Shalom Learning Center<br>
+                        <span class="text-accent-yellow">Wisdom is the</span><br>
+                        Fountain of Life
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-6 font-light slide-in" style="animation-delay: 0.2s;">
+                        31+ Years of Quality Christian Education
+                    </p>
+                    <p class="text-lg mb-8 slide-in" style="animation-delay: 0.4s;">
+                        DepEd-recognized programs from Pre-school to Junior High School.<br>
+                        Integrating faith-based teaching with academic excellence since 1993.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 slide-in" style="animation-delay: 0.6s;">
+                        <a href="mailto:admission@shalom.edu.ph?subject=Enrollment%20Inquiry&body=I%20want%20to%20enroll%20my%20child%20at%20Shalom%20Learning%20Center.%20Please%20send%20me%20the%20enrollment%20requirements%20and%20fee%20structure." 
+                           class="bg-white hover:bg-gray-100 primary-blue font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-center shadow-lg btn-responsive">
+                            <i class="fas fa-graduation-cap mr-2"></i> Enroll Now - Reserve for PHP 1,000!
+                        </a>
+                        <a href="#summer" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-center btn-responsive">
+                            <i class="fas fa-sun mr-2"></i> Summer Programs
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-6 text-sm slide-in" style="animation-delay: 0.8s;">
+                        <div class="flex items-center">
+                            <i class="fas fa-award text-accent-yellow mr-2"></i>
+                            <span>31+ Years of Excellence</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-cross text-accent-yellow mr-2"></i>
+                            <span>Christian Values</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-laptop text-accent-yellow mr-2"></i>
+                            <span>E-Learning Platform</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative float-animation">
+                        <div class="absolute inset-0 gradient-shalom rounded-full blur-3xl opacity-30"></div>
+ <div class="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
+  <div class="relative h-80">
+    <img
+      src="https://lh3.googleusercontent.com/p/AF1QipMiso3FfRZZY1uNX3rMXaEn-oZxUNkFW8LiXAIJ=s680-w680-h510-rw"
+      alt="Shalom Learning Center School Building"
+      class="w-full h-full object-cover"
+    >
+    <!-- Optional: remove this if you don’t want the dark gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+
+    <section class="bg-white py-16 -mt-16 relative z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 stats-grid">
+                    <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient-shalom mb-2">1993</div>
+                    <p class="text-gray-600">Established</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient-shalom mb-2">3</div>
+                    <p class="text-gray-600">Academic Levels</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient-shalom mb-2">PHP 1K</div>
+                    <p class="text-gray-600">Reservation Fee</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient-shalom mb-2">Online</div>
+                    <p class="text-gray-600">Payments Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    About <span class="text-gradient-shalom">Shalom Learning Center</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Where Christian values meet academic excellence for over three decades
+                </p>
+            </div>
+            
+            <!-- Main About Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- School Image Gallery -->
+                <div class="space-y-6" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="image-placeholder rounded-2xl h-80 shadow-xl">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/483886246_626643436789494_1905415644647488380_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH0vdI4NgMAjrMHyCrc_Y6p7bCtunRC73PtsK26dELvcy_cRs2Th6glopEYuuI4I2B2DGUNwkWoWe9qhdFMZV3H&_nc_ohc=z5vmcmfJh7sQ7kNvwEcdR-J&_nc_oc=Adngduhm-tEwJ1LlO-Ezgd57SqzOdwC7H1n4DWSOGLojKDOF6rrNgbX9cMMOQav39mXN_IIfrqSAdTmr9wWYhAiL&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=CpL6-nx2q6awUZCmD9hkCg&oh=00_AfL03y_1UYyXLsu1QnyYIQO0QQIlfh4NP4pVs3NkiebSQg&oe=683A13D2" 
+         alt="Shalom Learning Center Main Campus" 
+         class="w-full h-80 object-cover rounded-2xl shadow-xl">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
+                            <h4 class="font-bold primary-blue">Main Campus</h4>
+                            <p class="text-sm text-gray-600">Dasmariñas, Cavite</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="image-placeholder rounded-xl h-40">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/482239272_628647979922373_4728748165923650652_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH12KTChPigP-ndtjcyO56p4HkIhhk8qeLgeQiGGTyp4mCswh6ligY88qx1dg-ZESJfsAItpVsJ4AYvumaVUJel&_nc_ohc=1qgfTf9TFtcQ7kNvwFyDT70&_nc_oc=Adn19zIJqVsHoLo5C-EIbvLl0D3r9IpIxsZYIHq6TagOF1WpknsPQGtHYfmf7R-hpJSDJJkh1lwdAby40VbyOdoo&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=gb9mZGuZbX7bIqBPYPkySA&oh=00_AfL-ar426M6WpIV7JMyk7iqODtlShM8WeNsYZrLuXAzbsg&oe=683A0F0C" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="image-placeholder rounded-xl h-40">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/482220482_628648066589031_7766400209207435708_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFPqOakxp4gVf6NJkCKJ93XemiEnN7t9_d6aISc3u33974aJzU9ZdQfz-1t-f5T0YnXIGKzVbADKobMN6Wb2iHh&_nc_ohc=OpzsGPmVk5gQ7kNvwGYJVRc&_nc_oc=AdnKJlnaVkHUcy0YIRSqVRHL7sC5EbrgvHbo7U1HdLN_4tQ7ADEE2_RPccLoQdMfLzOuwPbqzz938O8k-oB0pDcA&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=1AlmO6iHDwFcEwGKsuJxeA&oh=00_AfLMmBE2unY_0FN4AyqYrD_Dqe5fjZEhyU8y5lf4tAOe0w&oe=6839EEF1" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission & Vision -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="bg-gradient-to-r from-blue-50 to-red-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold primary-blue mb-4">
+                            <i class="fas fa-bullseye mr-3"></i>Our Mission
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            To give an edge to every child's education and catapult their success by integrating faith-based teaching with academic excellence.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold accent-red mb-4">
+                            <i class="fas fa-eye mr-3"></i>Our Vision
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            To nurture future achievers through holistic, Christ-centered learning.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center text-white mb-4">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">DepEd Recognized</h4>
+                            <p class="text-gray-600 text-sm">All programs officially recognized by Department of Education</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-12 h-12 bg-accent-sky-blue rounded-full flex items-center justify-center text-white mb-4">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">E-Learning Ready</h4>
+                            <p class="text-gray-600 text-sm">Modern digital platform for enhanced learning experience</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-12 h-12 bg-accent-red rounded-full flex items-center justify-center text-white mb-4">
+                                <i class="fas fa-cross"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Christian Values</h4>
+                            <p class="text-gray-600 text-sm">Faith-based education nurturing character and spirituality</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white mb-4">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Proven Excellence</h4>
+                            <p class="text-gray-600 text-sm">31+ years of producing successful graduates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- School History Timeline -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-16" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Our Journey Through the Years</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            1993
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Foundation</h4>
+                        <p class="text-gray-600">Shalom Learning Center established with a vision for quality Christian education</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent-sky-blue rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            2024
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Digital Era</h4>
+                        <p class="text-gray-600">Launch of E-Learning platform for Grades 5-10, embracing modern education</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent-red rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            2025
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">32nd Anniversary</h4>
+                        <p class="text-gray-600">Celebrating over three decades of nurturing young minds and hearts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Campus Life Gallery</h3>
+                <div class="image-gallery">
+                    
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/483906305_626643143456190_5988791860671050117_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGf4zq2R_krtZFGaGZ7oPoBiIlJOWHcUHuIiUk5YdxQe6KBlgBaPI2Uap1Ea4J-Iki7f31klUNGwx7xn-xYZBfS&_nc_ohc=ZujgfyKHVQAQ7kNvwEp4APJ&_nc_oc=AdnV_-leKgTzSGPfleUMZDe-dXnpE47LwuSJ2SwsWnTOV73ty7q1FtLAl18UiKgv4zKg9XJdKWNB6CE8ESaT--XK&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=Ldaaar5LJKV3EcIzNfYYVA&oh=00_AfIRJrXsYI51y7cDd3YWo7NIhjZSdsEX2Dl4-xQjaPDIFw&oe=683A095D" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Reading Class
+                        </div>
+                    </div>
+                                        <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/489018524_643509981769506_6143773769634095437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFpv6MDm4wwI4WzfMHLo3y4_sYMJZUh51v-xgwllSHnWzJAgcKVCa6OCWIDU4B4DR5chtalVB8xao5lHPZft0KC&_nc_ohc=3jgDVUhQLqkQ7kNvwF079QG&_nc_oc=AdmuaveEoTfXkMEs_4rXQmohNbnj4ca0OIxDQtSxR7LwRlYxx9pyqOtqDgEnsYlO9KZeicVoZOKCdJYHpyzGR0E-&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=8aGGdcTFebVo3kYC-9ghrQ&oh=00_AfJo2A5AXzAVkbPg5KamO6hLRlnp1nrGPaaaKscJJZIb6A&oe=683A0346" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Masquerade Ball
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/484509511_628993976554440_1555606093609482761_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5ZqCBUzpoVnDj0bZxjH17cgn9WDSKvBdyCf1YNIq8F6o4pkCsJ39srffmq1jSHbc5uooSFerhNOISI_SESCul&_nc_ohc=ZnYOhcMvWkQQ7kNvwFjkO5Z&_nc_oc=Adk3Ab8R_q_pXlRMUswEO6exyvbas79_O4NUjHwhGBZXk1w2mG22BmpkcORfgRNDtj-hOO7xW7oUThQSca40QTCU&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=pLlje3A0bSfLsiwSqXkR1Q&oh=00_AfI9ZXGY_OOU493dst2cJBIB05KESZaRzge9mOAqLjL5mA&oe=683A1778" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Chapel Time
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/498262600_674169072036930_7950729738525125553_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE9azM6TCE1OReOi4kY7f2YYpZDE0qRWRNilkMTSpFZEySJ5aVbbSl-OtDAK-2jW_YJ_Lde5tIbUOCjkU7pwej2&_nc_ohc=IPsZXhpt4PcQ7kNvwEiq0a9&_nc_oc=AdkWKLRIuON5b6Q0a_CLEZMqpmL6fA_Mzxdu4J3cL0hNKxAP4ty57_O2h4F1S3kY83_dpZhjcXfhLmMkZWjDC9v3&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=9wm6gzjpTBdOn_RDZ9uY0w&oh=00_AfIyyMew7tZxhL95JZ4UjgJlI0tqfGVZ58uhMZdhCaxQDA&oe=6839E09E" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            E-Learning Lab
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/497855767_674164268704077_2314039137196060164_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGtAQUKCMiA7UWtIBCxRvtwtB--e2NyYlu0H757Y3JiW6pMWjqByVOwKvXSt0JnUa5S4A25v7oELK8dGeOoN9iM&_nc_ohc=46uc3zyJ1uUQ7kNvwH1xkaA&_nc_oc=AdnI9V3DW1XJGBhSOpzrjDGN0kOOVxN5yIQuenvvFPmi2hqmrfxT7gL1G6ofNRpf0C6-ots8z83vsiyi2sbAusKE&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=PwjZnmAs1nLVeMGmWYl77Q&oh=00_AfKdBtooPJ7d2V2fPHDXezChcIaAWGU_rupRcbQ551u5EQ&oe=6839F2DF" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Pageant Contest
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/484513946_629418649845306_7094317428203409369_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE5z3EmyUhI89qq-ta8v--Z4uN4tRx0Qvzi43i1HHRC_DctzbEdLqnu2_jmc3HFOAy_HeRKsg8TW22dVP9k4l46&_nc_ohc=WF8GZoYKiFYQ7kNvwFj6Xlb&_nc_oc=Adno0r5gftRwf9dWJY4D7cO-v9_xsEyTTt4z87mH5dhT8ZZ3DiHSNYyEHqYNw4hKn5D-mXQADbEnrPZ6zLbnxhdI&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=BIwr-WFEAl7ItBPSiJL31Q&oh=00_AfIVEtSERSfzgkI5dYRBkXtJvQAx5JTxjgv1uFn90MCqng&oe=683A01C3" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Music Contest
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/497684853_674168215370349_1211219731775935436_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHjclHlH-lFPoF5idOF-zcvYjIZLIn9xh5iMhksif3GHmlDqR24gH0ocI_yEVF08cNL2dPFREbiIEpK9v20JSUB&_nc_ohc=6mlVJkVquoAQ7kNvwFNyLLl&_nc_oc=Adn7bH4xDaa3Wz28p1WTjrSfMWXJEeeVzjbXz441je8VrBeTqUf_jWZXSzXRZ0y9AB0FziiSuUMRpxaezyznVdB8&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=75TZIj3z5BzbwyGEbqOc2g&oh=00_AfL5qYjsCLOgwy4JU0UDUCsXXbZ0XUDaw-N4bpNQ64ylKQ&oe=683A0F20" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Mental Sports
+                        </div>
+                    </div>
+                    <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/483541100_626643366789501_5276620299511532158_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHAMx2BMhaQ5jQnKXWggN603w0KG_4zkGrfDQob_jOQau0rZEpbR5xwKIYXa6CsUfhZSE4hrMqhxyPVhxSQQ7Yi&_nc_ohc=TiPQPhgqryYQ7kNvwHZkM8K&_nc_oc=AdncIRNy3uiuvrqSJnkbrj1WtYlV-rXdkZ_9eI1mfu_zb77YhUDwifumjeiDGgNPTnhsTsFtwbJfve_ijPZ_LhOu&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=kMTg3zbSPJq30tlYeqdiTg&oh=00_AfIK4iWX5gQnw8ukVKANrjOPLyq-vfqS3K8s6VAICoRzAw&oe=683A0D46" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Physical Sports
+                        </div>
+                    </div>
+                                        <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/498133804_674168845370286_543570499708715282_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHmU9XFaqAI_-mtEyuBqS_ZONvLFaPjnjY428sVo-OeNlizSw4J0GJRRNfAF7bA9y21HsTQ7WA0dnJe9GjI1tHm&_nc_ohc=FJ73w6pR2T4Q7kNvwFO7Ura&_nc_oc=AdkvAiuux8NZrQofNl-6WEqVdWUBE9buDxEuUUqAIe4uGcS5Wqmh4EOddxiHpkpC6dyIio2ITBVAuqLt6sXR3XZe&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=PqlyDhYJqOcCDfdXeVoadg&oh=00_AfJ10qdtku3Lk46kSq6U1t9io0Ebcb6t2Bao7_Dc0IA9Iw&oe=683A0183" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            E-Sports
+                        </div>
+                    </div>
+                                                            <div class="gallery-item relative">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/487855309_642872405166597_971254629536341905_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHML0TaH3-buXpuw5QjL8_3oUP1vKF2HlGhQ_W8oXYeUeo_W4Wh2plWB_nKZEpm7KkNpj-asTtDVQUse4cztvyw&_nc_ohc=FV5zLz0fTAUQ7kNvwHYBXTd&_nc_oc=Adko69aB49fdFOaFTwU7HDFi53mik3b5pQ2C-XPJpdnZ6y4R0t8S91ni7iuRblfoX5NcZY8f9S9E4DJuXYedqqA4&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=QVa9f4I1qIKOs9svFoa84w&oh=00_AfI55aMAoNxM610z3gggwsAfTJYPy3iMje5bAEyWVEZYoA&oe=6839E4D2" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                            Academic Competitions
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anniversary & Events Section -->
+    <section class="py-20 bg-white section-divider" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Special <span class="text-gradient-shalom">Events</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Celebrating milestones and building community
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 32nd Anniversary -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                    <div class="relative z-10">
+                        <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/497632916_674168748703629_1399649299883838121_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHZsRw8eE74vG9reLjGDi7SOztvfYZc4cY7O299hlzhxnYwjtaDYPUWTOWvvomfVI66vH7m3hbEoOFAGMrMHt-D&_nc_ohc=p3K0CxmBACcQ7kNvwFKlTUW&_nc_oc=Adm1Q1YWsOxAPiSCcHqzV04U3-2Jh-nDeoH0HncCypAQrSMlO6vPp46ps1L3X0aEWU1YYJaI9Y-CRNdJ7k3em_A7&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=nzpgDOH8WLCTdGHoWFNBZw&oh=00_AfJAFEnuUNJXehRoL2zdYv-1Zus-14y_zrSQazHX-DrG7w&oe=683A029E" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                                🎉
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">32nd Founding Anniversary</h3>
+                            <p class="text-gray-600 mb-4">Celebrating over three decades of quality Christian education</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm font-semibold text-yellow-700">May 16, 2025</p>
+                                <p class="text-xs text-gray-600">Annual celebration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baccalaureate Service -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                    <div class="relative z-10">
+                        <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/491977331_656492910471213_6955839604436426512_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjPLFK-8JfCpe9kaz1eVi_QKAaAxEvW39AoBoDES9bf6DyKjHmQjoNj3r8l8cID94-2rUT6IORU8TE_XHqn0hP&_nc_ohc=wULRSXauLv8Q7kNvwFXNT83&_nc_oc=AdmUxNhxc8XLmt3R8OE2VFHNiEf7gqiPljbzT9SMY1kwNefmwkDvdnF5oeutRLjKtyXJ5_nhBHPvJ0Gxh6CNb1am&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=NDnZs3LWCjI21X41HIBFCw&oh=00_AfIkCApenCZfceeuk_OwUrmHw6i71qrZ_xu9ri7ke0jWGQ&oe=683A0072" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                                🎓
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Baccalaureate Service</h3>
+                            <p class="text-gray-600 mb-4">Honoring our Grade 10 graduating students</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm font-semibold text-purple-700">April 2025</p>
+                                <p class="text-xs text-gray-600">Grade 10 graduates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Wellness Seminar -->
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-200 rounded-full -mr-16 -mt-16 opacity-20"></div>
+                    <div class="relative z-10">
+                        <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/490094518_649090017878169_3446824833184464084_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEQyR1pQHidVnAOAAelvmdcwJtKymCG8ofAm0rKYIbyhwz7C9BKpBOWfNdDryaDx3ZgbbJ-HCp1lch6FX8Y-aZ4&_nc_ohc=byEIYF1cp-kQ7kNvwGc7yM1&_nc_oc=Admb8Bd3Iv4oHVglYyGIKOmrnLbdRNhw_hC4OutHMjyxn0eZyEAcKvDcZcbE_FiAzTN0kJbPeqLE6MC95WSTQAKh&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=QaPUFidXbeoZS53ouFQ97Q&oh=00_AfLqjrDubvIw8ypqAzPAPEdmMHafZnqeXVyGJ1eGT1F03A&oe=6839FBDE" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                                👨‍👩‍👧‍👦
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Family Wellness Seminar</h3>
+                            <p class="text-gray-600 mb-4">"Thrive 2025" - Building stronger families</p>
+                            <div class="bg-white rounded-lg p-3">
+                                <p class="text-sm font-semibold text-teal-700">April 7, 2025</p>
+                                <p class="text-xs text-gray-600">For all families</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Academic <span class="text-gradient-shalom">Programs</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    DepEd-recognized programs from Pre-school to Junior High School
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 programs-grid">
+                <!-- Pre-school -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                    <div class="image-placeholder rounded-xl h-32 mb-6">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/492199361_657399840380520_8360257151989414892_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGNcERWdgzSKXm1XgAHFscYEAmadq0OdagQCZp2rQ51qPS76_YVyPun_xXE2vxF_yRF6iurVl9FfaZMuX3b-c-N&_nc_ohc=p3eJKWgVByAQ7kNvwEcaX73&_nc_oc=AdnzmCHRgFHlCpRJ3osdQlzzr3gJPBsd_ecwV7zYQDw0hDaLL6zD9TlpwhFJPT9E4ZC9tR-VDBnhDP0SRdCa3ajo&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=Rvznu1oXnbfn72HhW28fpw&oh=00_AfIAyIunLPpWZIhPeskQlJK9g4LsIZz8l3scEBac6Dthtw&oe=683A0864" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover object-top rounded-xl">
+                    </div>
+                    <div class="w-20 h-20 bg-primary-blue rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Pre-school</h3>
+                    <p class="text-gray-700 mb-4">Ages 3-4 years with social-emotional development focus</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check primary-blue mr-2"></i>Learning through play</li>
+                        <li><i class="fas fa-check primary-blue mr-2"></i>Self-care skills development</li>
+                        <li><i class="fas fa-check primary-blue mr-2"></i>Language development</li>
+                        <li><i class="fas fa-check primary-blue mr-2"></i>Fine motor skills</li>
+                    </ul>
+                    <div class="bg-blue-50 rounded-lg p-3 mb-4">
+                        <p class="text-sm font-semibold primary-blue">DepEd Recognition: K-063 S.1997</p>
+                    </div>
+                    <a href="mailto:admission@shalom.edu.ph?subject=Pre-school%20Program%20Inquiry" 
+                       class="primary-blue hover:text-blue-800 font-semibold btn-responsive">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Elementary -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-sky-400 to-sky-600"></div>
+                    <div class="image-placeholder rounded-xl h-32 mb-6">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/492239431_657399883713849_6435446652796619672_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEvwRD9sjwb0AG4T6AwhJN9snlFBh3dMa-yeUUGHd0xr3n76yll0P2PN7d-j10KEQB9by5GmxWsWZpBFzTwvvTt&_nc_ohc=yy9kWUdHNo4Q7kNvwGZFRAv&_nc_oc=Adm7ZUvQKH7i3kmxQKH3fXDP7MaOMMyKjJkq4a_B7EfTiwhp5HvPi7fcuQKmuK05192bLaNpbbWEorIOHlUT3C0G&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=rxRn3SuO7GDuhGdbS_iCuA&oh=00_AfJGi1C8esUW80ArokH_QAYMECx7nb3cbWj70YIl_uCVKA&oe=6839E279" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover object-top rounded-xl">
+                    </div>
+                    <div class="w-20 h-20 bg-accent-sky-blue rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Elementary</h3>
+                    <p class="text-gray-700 mb-4">Grades 1-6 with strong academic foundation</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check accent-sky-blue mr-2"></i>Core subjects mastery</li>
+                        <li><i class="fas fa-check accent-sky-blue mr-2"></i>Christian Values Education</li>
+                        <li><i class="fas fa-check accent-sky-blue mr-2"></i>E-Learning for Grades 5-6</li>
+                        <li><i class="fas fa-check accent-sky-blue mr-2"></i>Reading tutorials available</li>
+                    </ul>
+                    <div class="bg-sky-50 rounded-lg p-3 mb-4">
+                        <p class="text-sm font-semibold accent-sky-blue">DepEd Recognition: E-044 S.1998</p>
+                    </div>
+                    <a href="mailto:admission@shalom.edu.ph?subject=Elementary%20Program%20Inquiry" 
+                       class="accent-sky-blue hover:text-blue-800 font-semibold btn-responsive">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Junior High -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-400 to-red-600"></div>
+                    <div class="image-placeholder rounded-xl h-32 mb-6">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/492881416_657399913713846_3532181111631895529_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFGCmndQTlb3C578J3j9AINrjxHbYB-IDmuPEdtgH4gOTmqmVfab1DCo5FcHNA4zCuISdqEgm5PvNCkY6dengX4&_nc_ohc=Vd5PQWN3SSsQ7kNvwFJoAHN&_nc_oc=AdmYhheJ4nH7DWvWzAGqTH8aGRD4anwHUmw34kACymT7hGwaFefUPvfI-GQd4LrpA-01U8498maJ9VymtEuAT9PX&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=yefDxOHox4mKTa_Xbe2Dxw&oh=00_AfIOBLi2Nz5cKBehfRS1b330y1nVtT37ZCBM9KstBDrc7Q&oe=6839F033" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover object-top rounded-xl">
+                    </div>
+                    <div class="w-20 h-20 bg-accent-red rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Junior High</h3>
+                    <p class="text-gray-700 mb-4">Grades 7-10 aligned with K to 12 curriculum</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check accent-red mr-2"></i>K to 12 DepEd curriculum</li>
+                        <li><i class="fas fa-check accent-red mr-2"></i>Full E-Learning integration</li>
+                        <li><i class="fas fa-check accent-red mr-2"></i>Honors tracks available</li>
+                        <li><i class="fas fa-check accent-red mr-2"></i>Academic clubs</li>
+                    </ul>
+                    <div class="bg-red-50 rounded-lg p-3 mb-4">
+                        <p class="text-sm font-semibold accent-red">DepEd Recognition: E-026 S.2007</p>
+                    </div>
+                    <a href="mailto:admission@shalom.edu.ph?subject=Junior%20High%20School%20Inquiry" 
+                       class="accent-red hover:text-red-800 font-semibold btn-responsive">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Learning Section -->
+    <section id="elearning" class="py-20 bg-gradient-to-br from-blue-50 via-sky-50 to-red-50 parallax-bg" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    E-Learning <span class="text-gradient-shalom">Platform</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+                    Interactive digital modules for Grades 5-10 launched in Academic Year 2024-2025
+                </p>
+                <div class="inline-flex items-center bg-blue-100 primary-blue px-4 py-2 rounded-full">
+                    <i class="fas fa-laptop mr-2"></i>
+                    <span class="font-semibold">Now Available for Grades 5-10!</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 lg:p-12">
+                        <div class="image-placeholder rounded-xl h-48 mb-8">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/497880090_674168878703616_7205075566209924595_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFPB7tQ6zO1wFrEbvxlZqrnbobszpyAlPNuhuzOnICU838KBVA-lG-1E0Z53QkQUeZQjP0v0KVm1e5pEWM8Lb4I&_nc_ohc=i2ByCmHrC-cQ7kNvwEQqAkH&_nc_oc=AdmqAHSsLGmCkj7QQmnbW1w54esC3gVpfZjMByXKzMcWhLu_hie8_rILRK08G3e8MvYes4kIToBZpjhWL7f41UAF&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=luqCgWq37_qosz-851EbNA&oh=00_AfKE4LKlXeXwJwHJ49johzJDWgliJupbEJhaXq-FAJFD2g&oe=6839DD05" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                            <i class="fas fa-digital-tachograph mr-3 primary-blue"></i>
+                            Modern Learning Experience
+                        </h3>
+                        <p class="text-gray-700 mb-8 leading-relaxed">
+                            Our E-Learning platform combines the convenience of digital education with the personal touch of traditional learning. 
+                            Students can access interactive modules on any device while maintaining the core foundation of print materials.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gradient-to-r from-blue-50 to-sky-50 p-4 rounded-lg">
+                                <h4 class="font-semibold primary-blue mb-2">
+                                    <i class="fas fa-mobile-alt mr-2"></i>Multi-Device Access
+                                </h4>
+                                <p class="text-gray-600 text-sm">Smartphones, tablets, laptops, and desktops</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-sky-50 to-red-50 p-4 rounded-lg">
+                                <h4 class="font-semibold accent-sky-blue mb-2">
+                                    <i class="fas fa-book mr-2"></i>Blended Learning
+                                </h4>
+                                <p class="text-gray-600 text-sm">Core subjects online + print materials</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-blue-50 p-4 rounded-lg">
+                                <h4 class="font-semibold accent-red mb-2">
+                                    <i class="fas fa-headset mr-2"></i>Technical Support
+                                </h4>
+                                <p class="text-gray-600 text-sm">Assistance through admission office</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-blue-50 to-red-50 p-4 rounded-lg">
+                                <h4 class="font-semibold primary-blue mb-2">
+                                    <i class="fas fa-gamepad mr-2"></i>Interactive Modules
+                                </h4>
+                                <p class="text-gray-600 text-sm">Engaging digital learning experiences</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="mailto:admission@shalom.edu.ph?subject=E-Learning%20Platform%20Inquiry&body=I%20would%20like%20to%20know%20more%20about%20your%20E-Learning%20platform%20for%20Grades%205-10." 
+                               class="flex-1 bg-primary-blue hover-primary-blue text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center btn-responsive">
+                                <i class="fas fa-info-circle mr-2"></i>Learn More
+                            </a>
+                            <a href="tel:+639327625282" 
+                               class="flex-1 bg-accent-sky-blue hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center btn-responsive">
+                                <i class="fas fa-phone mr-2"></i>Call for Demo
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-gradient-to-br from-blue-100 to-red-100 p-8 lg:p-12 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="image-placeholder rounded-2xl h-48 mb-6">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/475571351_595752883211883_1834142132490341745_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2CUny8eYZElMZkYpSZtsR5niboS5N3_fmeJuhLk3f9_0artZWyTSj0y95oVJ3rtFX9aDDg4_CAUFORNqz_L-m&_nc_ohc=rZ0Z_Gml5IYQ7kNvwEaT4Mf&_nc_oc=AdmLdoqBZy5d-3m0Av5w7DlvY-xlknoUPekDPUZb_IEvIoMPB5TXSoUmseVmNNIRoiH_MlhRcwRIG4Ez5Zem-q-8&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=I-OqkBB4ZZ0ZFts1yhM1TA&oh=00_AfK-lSSzeeXsEklB3DGc2K3e6Rb9eiDeYkEgCvvJZE9JWw&oe=6839FFD9" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4">Available for Grades 5-10</h4>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold primary-blue">Grade 5</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold accent-sky-blue">Grade 6</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold accent-red">Grade 7</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold primary-blue">Grade 8</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold accent-sky-blue">Grade 9</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow">
+                                    <div class="text-2xl font-bold accent-red">Grade 10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summer Programs Section -->
+    <section id="summer" class="py-20 bg-white section-divider" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Summer <span class="text-gradient-shalom">Programs 2025</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+                    Make summer learning fun and productive with our special programs
+                </p>
+                <div class="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <span class="font-semibold">May 5-16, 2025 • #SmartSummer</span>
+                </div>
+            </div>
+            
+            <!-- Summer Programs Hero Image -->
+            <div class="mb-12">
+                <div class="image-placeholder rounded-2xl h-64 shadow-xl relative">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/483522043_626811860105985_6950878035318303646_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH3OdfK9v1K-Ai6K_NIGf4SN4hh__HaCcI3iGH_8doJwq_CuvEC-d6990xiQq_jNxdgk5Yi-vtyiQNnFaKFvEbS&_nc_ohc=AjxB4Oi4gvMQ7kNvwGNjper&_nc_oc=AdlybS0o70VzGDWn72FuHaaKq1B7X0uHn9eLaumX-9lnh_KBBTLCSwHaSbQvYayvs3gd8hrcKR56I4L0smFuxe44&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=icYUOYtc7cZg9cU-_YJThA&oh=00_AfLP24X0s6YiD7FbstMgzZ_Pr5_GMkCcZ0MpcEthxuSTPg&oe=683A0751" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                        <h3 class="font-bold">Summer Learning Programs</h3>
+                        <p class="text-sm">Fun, Educational, and Engaging</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 summer-grid">
+                <!-- Playschool -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/500308246_676889345098236_481282822416508267_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE1Y8bq32-OwD1rDhh7DnZmz5Sis1UKyqPPlKKzVQrKoxXx_Zmp7T_v-2FP83x1zrgiDSVnf8OoZa2pbgCsGsFf&_nc_ohc=kurW8MZMu_MQ7kNvwFPRtuH&_nc_oc=AdkQlGbEIDTcvWds_uvrTFGdpizSl77lYdIpUfUdOrwmSPHLZwTBQVvd5FDflvondTgbg64viwgSe2sO7JTrGtjh&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=-ZGIHEtomchEVmwG5j6gzg&oh=00_AfI89CZXO3Mr0tX5oEV6YsRFVc1xI6Dt-sEf5JN9KT7FjQ&oe=6839E47A" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            🧸
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Playschool</h3>
+                        <p class="text-sm text-gray-600">Ages 3-4 years</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-yellow-700 mb-1">Schedule</h4>
+                            <p class="text-sm text-gray-600">
+                                Batch 1: 8:00-9:30 AM<br>
+                                Batch 2: 10:00-11:30 AM
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-yellow-700 mb-1">Fee</h4>
+                            <p class="text-lg font-bold text-gray-900">PHP 1,500 per batch</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-yellow-700 mb-1">Class Size</h4>
+                            <p class="text-sm text-gray-600">Maximum 5 pupils per class</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Reading Adventure -->
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/483065337_626643150122856_2898409100202517170_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEUqI66rWWdlgT_16tx9iauWtNkV9GfhX9a02RX0Z-Ff1UD4EE-K_8ud0ub3FtNmW27r4YzML3mzV_pT9wKNxe8&_nc_ohc=NdHcX4PlSHIQ7kNvwEbEQ3l&_nc_oc=Adnjx4p96O-j5NqZP-l7lcaZYeozuk_3WRSLk2yh9P7bHdftflXQJa9Onko89YJ2ZMgvPQWSbCDklbzWNRCeklYf&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=8C8FYx9mc5DV7Qzk_mvuJQ&oh=00_AfJYdq2dK8fifrDCZHvjqgO1tp9Ul59QfnnUw6VztAqh7w&oe=6839ED92" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            📚
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Group Reading Adventure</h3>
+                        <p class="text-sm text-gray-600">Grades 1-3</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-green-700 mb-1">Schedule</h4>
+                            <p class="text-sm text-gray-600">
+                                8:00-9:30 AM (6-7 y/o)<br>
+                                10:00-11:30 AM (8-9 y/o)
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-green-700 mb-1">Fee</h4>
+                            <p class="text-lg font-bold text-gray-900">PHP 1,500 per batch</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-green-700 mb-1">Class Size</h4>
+                            <p class="text-sm text-gray-600">Maximum 10 pupils per group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maging Math-alino -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/500257622_676900108430493_5576849875638598072_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGkUTtHsIJnk2ztBq8MXvB3-jQD1sk_HV76NAPWyT8dXsbvbmuTLvphpoHJ5Z5DFbaK4UVspDq95a_am7DyR0po&_nc_ohc=xTZUaMVLyNkQ7kNvwGY39Lm&_nc_oc=Adm7rETCT2tIl6KVfyK0lG43JxfKXOScy1Jbt43pM4w37TGPhzMl082dU4ObeYRKS7xOxJg-a1JFAEc6RaEg9CuS&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=7zOqBcnQsL_yacKKW7TY5Q&oh=00_AfJFZYkxHdBjqMv59JeZiwLxRlcGooOe78zIJBN_Mkazsg&oe=683A0D97" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            🧮
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">"Maging Math-alino"</h3>
+                        <p class="text-sm text-gray-600">Grades 4-10</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-blue-700 mb-1">Schedule</h4>
+                            <p class="text-sm text-gray-600">
+                                Gr 4-6: 8:00-9:30 AM (9-11 y/o)<br>
+                                Gr 7-10: 10:00-11:30 AM (12-15 y/o)
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-blue-700 mb-1">Fee</h4>
+                            <p class="text-lg font-bold text-gray-900">PHP 1,500 per batch</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <h4 class="font-semibold text-blue-700 mb-1">Class Size</h4>
+                            <p class="text-sm text-gray-600">Maximum 10 pupils per group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One-on-One Tutorials -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-xl mb-12">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="image-placeholder rounded-xl h-48">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/483063132_626643480122823_3816419797141417502_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGlbEbYqh_CvfxAeTB_3WjfLJFe4HiUjyYskV7geJSPJlZasNncbhcFtbu9u6QG-UD_Ym0OaM2zeDA9iIadf-4t&_nc_ohc=nVJaMn_ltpQQ7kNvwEH7Z8N&_nc_oc=AdkZ5h-eb8UVy7OBzZdXf6tpH2tcnZgqw9G_VVPX_Zg1eQM102owGcovwMu9bXEr_0o2ubcSw3wRFIb-q5esvkWK&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=7LjqY1yT-GvS_lTUKS6Kxg&oh=00_AfL4HFi032CvK7ECXRX-VrD3Zg6wBU4z1BFJO_gnGPa8PQ&oe=6839E5EC" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <div class="text-center md:text-left">
+                            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto md:mx-0 mb-6">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">One-on-One Reading Tutorials</h3>
+                            <p class="text-gray-700 mb-6">Personalized reading sessions by appointment</p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-white rounded-lg p-6">
+                                    <h4 class="font-bold text-purple-600 mb-2">Rate</h4>
+                                    <p class="text-2xl font-bold text-gray-900">PHP 250/hour</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-6">
+                                    <h4 class="font-bold text-purple-600 mb-2">Schedule</h4>
+                                    <p class="text-gray-700">By appointment</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-6">
+                                    <h4 class="font-bold text-purple-600 mb-2">Focus</h4>
+                                    <p class="text-gray-700">Individual attention</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Make Summer Learning Fun?</h3>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:admission@shalom.edu.ph?subject=Summer%20Programs%202025%20Enrollment&body=I%20would%20like%20to%20enroll%20my%20child%20in%20your%20Summer%20Programs%202025.%20Please%20provide%20enrollment%20details." 
+                       class="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 btn-responsive">
+                        <i class="fas fa-sun mr-2"></i>Enroll in Summer Programs
+                    </a>
+                    <a href="tel:+639327625282" 
+                       class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 btn-responsive">
+                        <i class="fas fa-phone mr-2"></i>Call for Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Achievements Section -->
+    <section class="py-20 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Alumni <span class="text-gradient-shalom">Achievements</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Our graduates continue to excel in their chosen fields
+                </p>
+            </div>
+            
+            <!-- Achievement Showcase -->
+            <div class="mb-12">
+                <div class="image-placeholder rounded-2xl h-48 shadow-xl relative">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t45.1600-4/442569424_120209725752600740_6227538426682070762_n.jpg?stp=cp0_dst-jpg_p526x296_q75_spS444_tt6&_nc_cat=109&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeFodSS4T6mk8mnt5wpVDPgBXr5vN4WGEnJevm83hYYScrrVDWsOVMrive94__M1BpQkHFnGK9bRuT_ipskHhiVO&_nc_ohc=PCldw6f2pegQ7kNvwFJggJm&_nc_oc=AdlwV7q3C1LCUvBHn3u-x0frRNufBs-ZD3Eh5CWhQd_kS0thPKE_SVDglmGAWpWUL1d_gIGzO-_PxCi0ol5LygRW&_nc_zt=1&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=qB0vv0Zuwf5v4duFZmjvxA&oh=00_AfJnDteFwap2lNVyGZ9ppdSR2vrREIduA7kyTUaY9muzWw&oe=6839F312" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg">
+                        <h3 class="font-bold">Celebrating Excellence</h3>
+                        <p class="text-sm">31+ Years of Outstanding Graduates</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 alumni-grid">
+                <!-- Cum Laude Graduates -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t45.1600-4/442569424_120209725752600740_6227538426682070762_n.jpg?stp=cp0_dst-jpg_p526x296_q75_spS444_tt6&_nc_cat=109&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeFodSS4T6mk8mnt5wpVDPgBXr5vN4WGEnJevm83hYYScrrVDWsOVMrive94__M1BpQkHFnGK9bRuT_ipskHhiVO&_nc_ohc=PCldw6f2pegQ7kNvwFJggJm&_nc_oc=AdlwV7q3C1LCUvBHn3u-x0frRNufBs-ZD3Eh5CWhQd_kS0thPKE_SVDglmGAWpWUL1d_gIGzO-_PxCi0ol5LygRW&_nc_zt=1&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=qB0vv0Zuwf5v4duFZmjvxA&oh=00_AfJnDteFwap2lNVyGZ9ppdSR2vrREIduA7kyTUaY9muzWw&oe=6839F312" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <i class="fas fa-medal text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Cum Laude Graduates</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><strong>Koela Achine D. Sobremente</strong><br>Cum Laude (Batch 2007)</li>
+                        <li><strong>Katherine S. Aguirre</strong><br>Cum Laude, BA Psychology (2007)</li>
+                        <li><strong>Joe Mari D. Tobot</strong><br>Magna Cum Laude, Business Management (2016)</li>
+                    </ul>
+                </div>
+
+                <!-- Board Passers -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t45.1600-4/442569424_120209725752600740_6227538426682070762_n.jpg?stp=cp0_dst-jpg_p526x296_q75_spS444_tt6&_nc_cat=109&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeFodSS4T6mk8mnt5wpVDPgBXr5vN4WGEnJevm83hYYScrrVDWsOVMrive94__M1BpQkHFnGK9bRuT_ipskHhiVO&_nc_ohc=PCldw6f2pegQ7kNvwFJggJm&_nc_oc=AdlwV7q3C1LCUvBHn3u-x0frRNufBs-ZD3Eh5CWhQd_kS0thPKE_SVDglmGAWpWUL1d_gIGzO-_PxCi0ol5LygRW&_nc_zt=1&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=qB0vv0Zuwf5v4duFZmjvxA&oh=00_AfJnDteFwap2lNVyGZ9ppdSR2vrREIduA7kyTUaY9muzWw&oe=6839F312" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Board Passers</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><strong>Dr. Hannah Moe S. Ramos</strong><br>Physician Licensure (2003)</li>
+                        <li><strong>Engr. Alexander Christion V. Cobrol</strong><br>Electronics Engineer (2017)</li>
+                        <li><strong>Edrolyn V. Villaflor</strong><br>Physical Therapy (2016)</li>
+                        <li><strong>Patrolman Arjem C. Colet</strong><br>Criminology (2013)</li>
+                    </ul>
+                </div>
+
+                <!-- Career Success -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="image-placeholder rounded-lg h-32 mb-4">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t45.1600-4/442569424_120209725752600740_6227538426682070762_n.jpg?stp=cp0_dst-jpg_p526x296_q75_spS444_tt6&_nc_cat=109&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeFodSS4T6mk8mnt5wpVDPgBXr5vN4WGEnJevm83hYYScrrVDWsOVMrive94__M1BpQkHFnGK9bRuT_ipskHhiVO&_nc_ohc=PCldw6f2pegQ7kNvwFJggJm&_nc_oc=AdlwV7q3C1LCUvBHn3u-x0frRNufBs-ZD3Eh5CWhQd_kS0thPKE_SVDglmGAWpWUL1d_gIGzO-_PxCi0ol5LygRW&_nc_zt=1&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=qB0vv0Zuwf5v4duFZmjvxA&oh=00_AfJnDteFwap2lNVyGZ9ppdSR2vrREIduA7kyTUaY9muzWw&oe=6839F312" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <i class="fas fa-briefcase text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Professional Excellence</h3>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-700 mb-4">Our alumni have become:</p>
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="bg-blue-50 rounded p-2">
+                                <i class="fas fa-stethoscope primary-blue mr-1"></i>Doctors
+                            </div>
+                            <div class="bg-green-50 rounded p-2">
+                                <i class="fas fa-cogs text-green-600 mr-1"></i>Engineers
+                            </div>
+                            <div class="bg-purple-50 rounded p-2">
+                                <i class="fas fa-balance-scale text-purple-600 mr-1"></i>Lawyers
+                            </div>
+                            <div class="bg-red-50 rounded p-2">
+                                <i class="fas fa-shield-alt accent-red mr-1"></i>Law Enforcement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-20 gradient-shalom text-white relative overflow-hidden section-divider">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl mb-4">
+                    Join the Shalom Family
+                </h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl max-w-3xl mx-auto mb-4">
+                    Enrollment for Academic Year 2025-2026 is now ongoing!
+                </p>
+                <div class="inline-flex items-center bg-white bg-opacity-20 px-6 py-3 rounded-full">
+                    <i class="fas fa-star mr-2 text-accent-yellow"></i>
+                    <span class="font-semibold">Reserve your slot for just PHP 1,000!</span>
+                </div>
+            </div>
+            
+            <!-- Admissions Hero Image -->
+            <div class="mb-12">
+                <div class="image-placeholder rounded-2xl h-48 shadow-xl relative bg-white bg-opacity-20">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/491890221_658140870306417_7356929139110789194_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHLQGaVpTFcjGC0A60CHyXM1K4Mb176HuLUrgxvXvoe4mINdbwkbVO0XeGLsqEJisYEL7WgPzFe7owf3H830ATw&_nc_ohc=snf7tt08aOoQ7kNvwGo9020&_nc_oc=AdnkrP0rGdNeEvXhjnZgxZwUq3JcNT4z1Mjn6Bnpw_58-1MesNPb2KdGS58pXJq-brfrDK3ZBjQInG7k9riYu4QY&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=oZtKVyVhhJGJP5y6AZlS8w&oh=00_AfIuccqr3wxdn0LdvF-G0L0hjpQGAplsDK76xHGMzYAeow&oe=683A06CC" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
+                        <h3 class="font-bold">Welcome to Our Community</h3>
+                        <p class="text-sm">Where Every Child Matters</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden text-gray-900">
+                <div class="lg:flex">
+                    <div class="lg:w-1/2 bg-gradient-to-br from-blue-50 to-red-50 p-8 lg:p-12">
+                        <h3 class="text-3xl font-bold mb-6">Enrollment Benefits & Discounts</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Sibling Discount</h4>
+                                    <p class="text-gray-600">5% discount on second child onward</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-accent-sky-blue rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Referral Discount</h4>
+                                    <p class="text-gray-600">Up to 7% discount for referrals</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-accent-red rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-cross"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Pastor's Kid Discount</h4>
+                                    <p class="text-gray-600">10% discount for children of pastors</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Academic Honors Discount</h4>
+                                    <p class="text-gray-600">Special discounts for Honors/High Honors students</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-6 bg-green-100 rounded-xl">
+                            <h4 class="font-bold text-green-800 mb-2">
+                                <i class="fas fa-credit-card mr-2"></i>Payment Mode
+                            </h4>
+                            <p class="text-green-700">Cashless payments only (online transfers) effective August 1, 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 p-8 lg:p-12 bg-white">
+                        <h3 class="text-3xl font-bold mb-6">Enrollment Process</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 gradient-shalom text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">1</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Complete Inquiry</h4>
+                                    <p class="text-gray-600">Fill online form or visit our office</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 gradient-shalom text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Reserve Slot</h4>
+                                    <p class="text-gray-600">Pay PHP 1,000 reservation fee</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 gradient-shalom text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">3</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Submit Documents</h4>
+                                    <p class="text-gray-600">Birth certificate, report card, baptismal certificate</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 gradient-shalom text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">4</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Complete Payment</h4>
+                                    <p class="text-gray-600">Online transfer (details in student manual)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <a href="mailto:admission@shalom.edu.ph?subject=Enrollment%20Inquiry%20AY%202025-2026&body=Hello!%20I%20want%20to%20enroll%20my%20child%20at%20Shalom%20Learning%20Center%20for%20AY%202025-2026.%20Please%20send%20me%20the%20enrollment%20requirements%20and%20fee%20structure.%20I'm%20interested%20in%20the%20available%20discounts." 
+                               class="w-full gradient-shalom text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center btn-responsive">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Start Enrollment Process
+                            </a>
+                            
+                            <div class="flex gap-4">
+                                <a href="tel:+639327625282" class="flex-1 bg-accent-red hover-accent-red text-white font-bold py-3 px-4 rounded-lg transition duration-300 text-center btn-responsive">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Call Now
+                                </a>
+                                <a href="mailto:info@shalom.edu.ph?subject=Information%20Request" 
+                                   class="flex-1 bg-accent-sky-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 text-center btn-responsive">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Get Info
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 text-center text-sm text-gray-600">
+                            <p>Office Hours: Monday-Friday, 7:30 AM - 4:30 PM</p>
+                            <p class="font-semibold">
+                                <a href="tel:+639327625282" class="click-to-call btn-responsive">0932-762-5282</a> • 
+                                <a href="tel:+639274906199" class="click-to-call btn-responsive">0927-490-6199</a> • 
+                                <a href="tel:+6346540973" class="click-to-call btn-responsive">(046) 540-9730</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Visit <span class="text-gradient-shalom">Us</span>
+                </h2>
+                <div class="w-24 h-1 gradient-shalom mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Located in Brgy. Fatima 1-K, Dasmariñas, Cavite
+                </p>
+            </div>
+            <!-- QR Code Quick Access Section - Add this after the Contact Section header -->
+<div class="flex justify-center mb-12">
+    <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-2xl shadow-xl p-8 w-full max-w-4xl mx-auto border border-gray-100">
+        <!-- Mobile Layout (Portrait) -->
+        <div class="block md:hidden text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-blue rounded-full mb-4">
+                <i class="fas fa-qrcode text-white text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-2">Quick Contact</h4>
+            <p class="text-gray-600 text-sm mb-6">Scan for instant access to our contact info</p>
+            
+            <div class="bg-white rounded-xl p-4 shadow-lg mb-6">
+                <img src="qr.png" alt="QR Code for Quick Contact" class="w-36 h-36 mx-auto rounded-lg">
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <a href="tel:+639327625282" class="bg-accent-sky-blue hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+                <a href="mailto:admission@shalom.edu.ph" class="bg-accent-red hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
+                    <i class="fas fa-envelope mr-2"></i>Email Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Desktop Layout (Landscape) -->
+        <div class="hidden md:flex items-center gap-12">
+            <!-- Text Content -->
+            <div class="flex-1">
+                <div class="flex items-center mb-4">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-blue rounded-full mr-4">
+                        <i class="fas fa-qrcode text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold text-gray-900">Quick Contact</h4>
+                </div>
+                <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                    Scan the QR code for instant access to our contact information, enrollment details, and quick communication with our admissions team.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="tel:+639327625282" class="bg-accent-sky-blue hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                    <a href="mailto:admission@shalom.edu.ph" class="bg-accent-red hover:bg-red-600 text-white font-semibold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                        <i class="fas fa-envelope mr-2"></i>Email Us
+                    </a>
+                </div>
+            </div>
+            
+            <!-- QR Code -->
+            <div class="flex-shrink-0">
+                <div class="bg-white rounded-2xl p-6 shadow-xl">
+                    <img src="qr.png" alt="QR Code for Quick Contact" class="w-48 h-48 rounded-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 contact-grid">                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start group">
+                                <div class="flex-shrink-0 gradient-shalom text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 text-lg">Location</h4>
+                                    <p class="text-gray-600">Private Lot, Brgy. Fatima 1-K</p>
+                                    <p class="text-gray-600">City of Dasmariñas, Cavite, Philippines</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group">
+                                <div class="flex-shrink-0 bg-accent-sky-blue text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 text-lg">Phone Numbers</h4>
+                                    <p class="space-y-1">
+                                        <a href="tel:+639327625282" class="text-gray-600 hover:text-blue-600 block click-to-call btn-responsive">
+                                            <i class="fas fa-phone-alt text-xs mr-2"></i>0932-762-5282 (Primary)
+                                        </a>
+                                        <a href="tel:+639274906199" class="text-gray-600 hover:text-blue-600 block click-to-call btn-responsive">
+                                            <i class="fas fa-phone-alt text-xs mr-2"></i>0927-490-6199 (Secondary)
+                                        </a>
+                                        <a href="tel:+6346540973" class="text-gray-600 hover:text-blue-600 block click-to-call btn-responsive">
+                                            <i class="fas fa-phone-alt text-xs mr-2"></i>(046) 540-9730 (Office)
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group">
+                                <div class="flex-shrink-0 bg-accent-red text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 text-lg">Email Addresses</h4>
+                                    <p class="space-y-1">
+                                        <a href="mailto:admission@shalom.edu.ph" class="text-gray-600 hover:text-blue-600 block btn-responsive">
+                                            <i class="fas fa-graduation-cap text-xs mr-2"></i>admission@shalom.edu.ph
+                                        </a>
+                                        <a href="mailto:info@shalom.edu.ph" class="text-gray-600 hover:text-blue-600 block btn-responsive">
+                                            <i class="fas fa-info-circle text-xs mr-2"></i>info@shalom.edu.ph
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group">
+                                <div class="flex-shrink-0 bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 text-lg">Office Hours</h4>
+                                    <p class="text-gray-600">
+                                        Monday-Friday: 7:30 AM - 4:30 PM<br>
+                                        <span class="text-sm text-gray-500">Closed on weekends and holidays</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group">
+                                <div class="flex-shrink-0 bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-facebook"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-gray-900 text-lg">Social Media</h4>
+                                    <a href="https://facebook.com/ShalomLearningCenter1993" target="_blank" class="text-gray-600 hover:text-blue-600 btn-responsive">
+                                        facebook.com/ShalomLearningCenter1993
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Important Notice -->
+                    <div class="p-6 bg-gradient-to-r from-blue-100 to-red-100 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-3">
+                            <i class="fas fa-exclamation-circle mr-2 primary-blue"></i>
+                            Important Notice
+                        </h4>
+                        <p class="text-gray-700 text-sm">
+                            <strong>Cashless Payments Only:</strong> Effective August 1, 2024, all payments must be made through online transfers. 
+                            Bank details are provided in the student manual (Item No. 7). No over-the-counter payments accepted.
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com/ShalomLearningCenter1993" 
+                               target="_blank"
+                               class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110 btn-responsive">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="mailto:admission@shalom.edu.ph" 
+                               class="bg-accent-red hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110 btn-responsive">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+639327625282" 
+                               class="bg-accent-sky-blue hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110 btn-responsive">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="mailto:info@shalom.edu.ph" 
+                               class="bg-primary-blue hover:bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110 btn-responsive">
+                                <i class="fas fa-info"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8">Quick Inquiry</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="parent-name" class="block text-gray-700 font-medium mb-2">Parent's Name *</label>
+                            <input type="text" id="parent-name" name="parent-name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="contact-number" class="block text-gray-700 font-medium mb-2">Contact Number *</label>
+                            <input type="tel" id="contact-number" name="contact-number" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                                   placeholder="09XX-XXX-XXXX">
+                        </div>
+                        
+                        <div>
+                            <label for="child-grade" class="block text-gray-700 font-medium mb-2">Child's Grade Level *</label>
+                            <select id="child-grade" name="child-grade" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                                <option value="">Select Grade Level</option>
+                                <optgroup label="Pre-school">
+                                    <option value="Pre-school (3-4 years)">Pre-school (3-4 years)</option>
+                                </optgroup>
+                                <optgroup label="Elementary">
+                                    <option value="Grade 1">Grade 1</option>
+                                    <option value="Grade 2">Grade 2</option>
+                                    <option value="Grade 3">Grade 3</option>
+                                    <option value="Grade 4">Grade 4</option>
+                                    <option value="Grade 5">Grade 5 (with E-Learning)</option>
+                                    <option value="Grade 6">Grade 6 (with E-Learning)</option>
+                                </optgroup>
+                                <optgroup label="Junior High School">
+                                    <option value="Grade 7">Grade 7 (with E-Learning)</option>
+                                    <option value="Grade 8">Grade 8 (with E-Learning)</option>
+                                    <option value="Grade 9">Grade 9 (with E-Learning)</option>
+                                    <option value="Grade 10">Grade 10 (with E-Learning)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="inquiry-type" class="block text-gray-700 font-medium mb-2">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                                <option value="General Enrollment">General Enrollment</option>
+                                <option value="Summer Programs">Summer Programs</option>
+                                <option value="E-Learning Platform">E-Learning Platform</option>
+                                <option value="Tuition & Fees">Tuition & Fees</option>
+                                <option value="Discounts">Available Discounts</option>
+                                <option value="Transfer Student">Transfer Student</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                                      placeholder="Please share any specific questions about our programs, your child's needs, or schedule preferences..."></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="christian-family" name="christian-family" class="h-4 w-4 text-blue-600">
+                            <label for="christian-family" class="ml-2 text-sm text-gray-600">
+                                We are a Christian family (eligible for special considerations)
+                            </label>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button type="submit" 
+                                    class="flex-1 gradient-shalom text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Inquiry
+                            </button>
+                            <a href="mailto:admission@shalom.edu.ph?subject=Quick%20Enrollment%20Question" 
+                               class="flex-1 bg-accent-sky-blue hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center btn-responsive">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Email Direct
+                            </a>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                        <h4 class="font-semibold text-yellow-800 mb-2">
+                            <i class="fas fa-lightbulb mr-2"></i>Quick Tip
+                        </h4>
+                        <p class="text-yellow-700 text-sm">
+                            Ready to enroll? Reserve your child's slot now with just PHP 1,000! 
+                            Take advantage of our sibling discounts and other special offers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Map -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-16" data-aos="fade-up">
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Find Us Here</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                        <div class="lg:col-span-2">
+                            <!-- Real Google Maps Embed -->
+                            <div class="relative rounded-xl overflow-hidden shadow-lg">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.859742598193!2d120.96100757584976!3d14.319578586134051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d5b5e94fe3cd%3A0x3889e44d6b7be4a0!2sShalom%20Learning%20Center%20-%20Dasmari%C3%B1as%2C%20Cavite!5e0!3m2!1sen!2sph!4v1748251521527!5m2!1sen!2sph"
+                                    width="100%" 
+                                    height="400" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    class="rounded-xl">
+                                </iframe>
+                                <button onclick="openFullMap()" class="absolute top-4 right-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+                                    <i class="fas fa-expand-arrows-alt text-gray-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-blue-50 to-red-50 p-6 rounded-xl">
+                                <h4 class="font-bold text-gray-900 mb-4">
+                                    <i class="fas fa-directions mr-2 primary-blue"></i>
+                                    How to Get Here
+                                </h4>
+                                <div class="space-y-3 text-gray-700">
+                                    <div class="flex items-start">
+                                        <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-car text-xs primary-blue"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">By Private Vehicle</p>
+                                            <p class="text-sm">Navigate to Brgy. Fatima 1-K, Dasmariñas City, Cavite</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-bus text-xs text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">By Public Transport</p>
+                                            <p class="text-sm">Take jeepney/bus to Dasmariñas, then tricycle to Brgy. Fatima 1-K</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-map-marker-alt text-xs accent-red"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Landmarks Nearby</p>
+                                            <p class="text-sm">Near local church and barangay hall</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col gap-3">
+                                <a href="https://maps.google.com/?q=Brgy.+Fatima+1-K+Dasmariñas+Cavite" 
+                                   target="_blank"
+                                   class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center btn-responsive">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Open in Google Maps
+                                </a>
+                                <a href="tel:+639327625282" 
+                                   class="bg-primary-blue hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center btn-responsive">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Call for Directions
+                                </a>
+                                <button onclick="getDirections()" 
+                                        class="bg-accent-sky-blue hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 btn-responsive">
+                                    <i class="fas fa-route mr-2"></i>
+                                    Get Directions
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg">
+                    <div class="image-placeholder rounded-xl h-32 mb-6">
+    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/484779936_628514863269018_3782055867497536544_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFxlRd7sZ8avZLoMNf6BTeYZam40t4LrmBlqbjS3guuYJAdpZnRw_TrodNN1Y6OgzqrVBx5ojN8mmENNvcabCHS&_nc_ohc=MpHQKjVkqxUQ7kNvwEZVBZj&_nc_oc=AdkbPt_zYP7QaL-xGFbYUcpjRwhizEx9E6SSlkGdwVnD_-gFdX98E_fXESwWdDSpg3ONRHpat5x8YBVFM_sqJiRE&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=dPxPI-r0VpT-Lt3JEUb88w&oh=00_AfLqVuf-ooqsDh5T3GAdrs2XF6lz6-cf-pICLmgp6SzdeQ&oe=6839FBC3" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-2xl font-bold primary-blue mb-4">
+                        <i class="fas fa-bullseye mr-3"></i>Our Mission
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To give an edge to every child's education and catapult their success by integrating faith-based teaching with academic excellence.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg">
+                    <div class="image-placeholder rounded-xl h-32 mb-6">
+    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/483511640_626818723438632_1529178861253534861_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEMzVJ4m17Kx_ut5xtZkgx7zD4LCXN8X9TMPgsJc3xf1B7qlJYrIbUu6EN22qVgUqdDbYyWnUkvMG4b-yEwGfhr&_nc_ohc=hj_YLyd9jN8Q7kNvwEO12ST&_nc_oc=AdnqwjjrUg4Pk6vPKlXFb9Alb1JXLcGgqEfsU6g1-KF4gZcZNbfLSlNNVofloTSMnO542dmD6JHAIWNuxHldymCa&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=mKGEibXq9l3Ze1HH5o90nA&oh=00_AfKK8uBekx3aNSZXK_C6BOCB0GZmT1aYIT0bKpmn5vqLdw&oe=683A0109" 
+         alt="Teacher with Students" 
+         class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-2xl font-bold accent-red mb-4">
+                        <i class="fas fa-eye mr-3"></i>Our Vision
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To nurture future achievers through holistic, Christ-centered learning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-shalom text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 footer-grid">                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="heading-font text-2xl">Shalom Learning Center</span>
+                    </div>
+                    <p class="text-blue-100 mb-4">
+                        Wisdom is the fountain of life - 31+ years of quality Christian education
+                    </p>
+                    <p class="text-sm text-blue-200">
+                        Integrating faith-based teaching with academic excellence since 1993
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#programs" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">Academic Programs</a></li>
+                        <li><a href="#elearning" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">E-Learning Platform</a></li>
+                        <li><a href="#summer" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">Summer Programs</a></li>
+                        <li><a href="#admissions" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">Enrollment</a></li>
+                        <li><a href="mailto:admission@shalom.edu.ph" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">Admission Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Brgy. Fatima 1-K, Dasmariñas, Cavite
+                        </li>
+                        <li>
+                            <a href="tel:+639327625282" class="hover:text-white transition duration-300 click-to-call btn-responsive">
+                                <i class="fas fa-phone mr-2"></i>
+                                0932-762-5282
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:admission@shalom.edu.ph" class="hover:text-white transition duration-300 btn-responsive">
+                                <i class="fas fa-envelope mr-2"></i>
+                                admission@shalom.edu.ph
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock mr-2"></i>
+                            Mon-Fri: 7:30 AM - 4:30 PM
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enroll Now!</h4>
+                    <p class="text-blue-100 mb-4">
+                        Reserve your child's slot for Academic Year 2025-2026
+                    </p>
+                    <a href="mailto:admission@shalom.edu.ph?subject=Enrollment%20AY%202025-2026&body=I%20want%20to%20enroll%20my%20child%20at%20Shalom%20Learning%20Center!" 
+                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 btn-responsive">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Start Enrollment
+                    </a>
+                    <div class="mt-4">
+                        <p class="text-sm text-blue-200 mb-2">Follow us:</p>
+                        <div class="flex space-x-3">
+                            <a href="https://facebook.com/ShalomLearningCenter1993" target="_blank" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="mailto:admission@shalom.edu.ph" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                            <a href="tel:+639327625282" class="text-blue-100 hover:text-white transition duration-300 btn-responsive">
+                                <i class="fas fa-phone text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-400 border-opacity-30 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-blue-100 text-sm mb-4 md:mb-0">
+                        © 2025 Shalom Learning Center, Inc. All rights reserved. DepEd Recognized K-063 S.1997; E-044 S.1998; E-026 S.2007
+                    </p>
+                    <div class="flex items-center space-x-4 text-blue-100 text-sm">
+                        <span>🏆 31+ Years of Excellence</span>
+                        <span>✝️ Christian Education</span>
+                        <span>💻 E-Learning Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- JavaScript for Enhanced Interactions -->
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        function openMobileMenu() {
+            mobileMenuPanel.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenuPanel.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Close mobile menu when clicking on navigation links
+        document.querySelectorAll('#mobile-menu-panel a[href^="#"]').forEach(link => {
+            link.addEventListener('click', closeMobileMenuFunc);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const parentName = formData.get('parent-name');
+            const contactNumber = formData.get('contact-number');
+            const childGrade = formData.get('child-grade');
+            const inquiryType = formData.get('inquiry-type');
+            const message = formData.get('message');
+            const christianFamily = formData.get('christian-family') ? 'Yes' : 'No';
+            
+            const emailBody = `
+Dear Shalom Learning Center Admissions Team,
+
+I am interested in enrolling my child for Academic Year 2025-2026.
+
+Parent Details:
+Name: ${parentName}
+Contact Number: ${contactNumber}
+Christian Family: ${christianFamily}
+
+Child Information:
+Grade Level: ${childGrade}
+Inquiry Type: ${inquiryType}
+
+Message:
+${message || 'Please send me enrollment information and requirements.'}
+
+I would like to know more about:
+- Enrollment requirements and process
+- Tuition fees and available discounts
+- E-Learning platform (for applicable grades)
+- Summer programs
+- Payment methods (online transfer details)
+
+Please contact me at your earliest convenience.
+
+Best regards,
+${parentName}
+            `.trim();
+            
+            const emailSubject = `Enrollment Inquiry - ${inquiryType} - ${childGrade}`;
+            const mailtoLink = `mailto:admission@shalom.edu.ph?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            window.location.href = mailtoLink;
+        });
+
+        // Phone number formatting
+        document.getElementById('contact-number').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 4) {
+                value = value.replace(/(\d{4})(\d{3})(\d{4})/, '$1-$2-$3');
+            }
+            e.target.value = value;
+        });
+
+        // Add loading state to buttons
+        document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon && !icon.classList.contains('fa-spin')) {
+                    const originalClass = icon.className;
+                    icon.className = 'fas fa-spinner fa-spin';
+                    setTimeout(() => {
+                        icon.className = originalClass;
+                    }, 2000);
+                }
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax-bg');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.backgroundPosition = `center ${speed}px`;
+            }
+        });
+
+        // Image gallery hover effects
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all slide-in elements
+        document.querySelectorAll('.slide-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add scroll indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            // Create progress bar if it doesn't exist
+            let progressBar = document.getElementById('scroll-progress');
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.id = 'scroll-progress';
+                progressBar.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: ${scrolled}%;
+                    height: 3px;
+                    background: linear-gradient(90deg, #010183, #018EDD, #CB0002);
+                    z-index: 9999;
+                    transition: width 0.3s ease;
+                `;
+                document.body.appendChild(progressBar);
+            } else {
+                progressBar.style.width = scrolled + '%';
+            }
+        });
+
+        // Add click-to-copy functionality for contact info
+        document.querySelectorAll('.click-to-call').forEach(element => {
+            element.addEventListener('click', function(e) {
+                // For tel: links, let them work normally
+                if (this.href && this.href.startsWith('tel:')) {
+                    return;
+                }
+                
+                // For other elements, copy to clipboard
+                e.preventDefault();
+                const text = this.textContent.trim();
+                navigator.clipboard.writeText(text).then(() => {
+                    // Show tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.textContent = 'Copied!';
+                    tooltip.style.cssText = `
+                        position: absolute;
+                        background: #333;
+                        color: white;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        z-index: 1000;
+                        pointer-events: none;
+                    `;
+                    this.appendChild(tooltip);
+                    setTimeout(() => tooltip.remove(), 2000);
+                });
+            });
+        });
+
+        // Map functionality
+        function openFullMap() {
+            window.open('https://maps.google.com/?q=Brgy.+Fatima+1-K+Dasmariñas+Cavite&z=15', '_blank');
+        }
+
+        function getDirections() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    const destination = 'Brgy.+Fatima+1-K+Dasmariñas+Cavite';
+                    const url = `https://maps.google.com/maps/dir/${lat},${lng}/${destination}`;
+                    window.open(url, '_blank');
+                }, function() {
+                    // If geolocation fails, just open general directions
+                    window.open('https://maps.google.com/maps/dir//Brgy.+Fatima+1-K+Dasmariñas+Cavite', '_blank');
+                });
+            } else {
+                // Geolocation not supported
+                window.open('https://maps.google.com/maps/dir//Brgy.+Fatima+1-K+Dasmariñas+Cavite', '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
